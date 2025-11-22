@@ -46,7 +46,7 @@ app.*.map.json
 /android/app/release
 
 # Generated files
-*.g.dart
+# *.g.dart  # Commented out to allow committing generated files for CI/CD
 *.freezed.dart
 
 # Firebase
