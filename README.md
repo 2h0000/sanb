@@ -66,25 +66,31 @@ The app follows a clean architecture pattern with the following layers:
 ## Project Structure
 
 ```
-lib/
-├── app/                    # App configuration, routing, theme
-├── core/                   # Core utilities and cryptography
-│   ├── crypto/            # Encryption services
-│   └── utils/             # Utilities (Result type, logger)
-├── data/                   # Data layer
-│   ├── local/db/          # Local database (Drift)
-│   ├── remote/            # Firebase client
-│   └── sync/              # Synchronization service
-├── domain/                 # Domain layer
-│   ├── entities/          # Business entities
-│   └── repositories/      # Repository interfaces
-├── features/               # Feature modules
-│   ├── notes/             # Notes feature
-│   ├── vault/             # Password vault feature
-│   ├── auth/              # Authentication
-│   └── settings/          # Settings
-└── main.dart              # App entry point
+├── lib/                    # Source code
+│   ├── app/               # App configuration, routing, theme
+│   ├── core/              # Core utilities and cryptography
+│   ├── data/              # Data layer (local DB, Firebase)
+│   ├── domain/            # Domain layer (entities, repositories)
+│   └── features/          # Feature modules (notes, vault, auth, settings)
+├── docs/                   # Documentation
+│   ├── setup/             # Setup guides
+│   ├── build/             # Build and release guides
+│   ├── development/       # Development documentation
+│   └── history/           # Change history and fixes
+├── scripts/                # Utility scripts
+│   ├── build/             # Build scripts
+│   ├── setup/             # Setup scripts
+│   └── version/           # Version management scripts
+├── firebase/               # Firebase configuration
+│   ├── firestore.rules    # Firestore security rules
+│   └── storage.rules      # Storage security rules
+├── assets/                 # App assets (icons, images)
+├── android/                # Android platform code
+├── ios/                    # iOS platform code
+└── test/                   # Unit and widget tests
 ```
+
+See [docs/](./docs/) for detailed documentation.
 
 ## Dependencies
 
@@ -125,6 +131,27 @@ Run tests:
 ```bash
 flutter test
 ```
+
+### Building Release
+
+Use the build script for creating release builds:
+
+```bash
+# Windows
+scripts\build\build_release.bat
+
+# Linux/Mac
+./scripts/build/build_release.sh
+```
+
+See [scripts/README.md](./scripts/README.md) for more utility scripts.
+
+## Documentation
+
+- 📚 [Full Documentation](./docs/) - Complete project documentation
+- 🚀 [Setup Guide](./docs/setup/SETUP.md) - Getting started
+- 🔨 [Build Guide](./docs/build/BUILD_RELEASE_GUIDE.md) - Building releases
+- 🔥 [Firebase Setup](./firebase/README.md) - Firebase configuration
 
 ## License
 
