@@ -1,0 +1,18 @@
+# Android Keystore Configuration Template
+# 
+# Copy this file to 'key.properties' and fill in your actual values
+# DO NOT commit key.properties to version control!
+#
+# To generate a keystore, run:
+# keytool -genkey -v -keystore ~/encrypted-notebook-release.jks -keyalg RSA -keysize 2048 -validity 10000 -alias encrypted-notebook
+
+storePassword=YOUR_KEYSTORE_PASSWORD
+keyPassword=YOUR_KEY_PASSWORD
+keyAlias=encrypted-notebook
+storeFile=C:/path/to/encrypted-notebook-release.jks
+
+# Example (Windows):
+# storeFile=C:/Users/YourName/encrypted-notebook-release.jks
+#
+# Example (macOS/Linux):
+# storeFile=/Users/YourName/encrypted-notebook-release.jks

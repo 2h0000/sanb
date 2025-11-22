@@ -1,0 +1,70 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code
+.vscode/
+
+# Kiro IDE
+.kiro/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Generated files
+*.g.dart
+*.freezed.dart
+
+# Firebase
+# firebase_options.dart - Keep the placeholder, but add actual config to .gitignore if needed
+google-services.json
+GoogleService-Info.plist
+
+# Secure storage
+*.keystore
+key.properties
+
+# Local configuration
+local.properties
+
+# APK/AAB files (use GitHub Releases instead)
+*.apk
+*.aab
+
+# Development notes and summaries (optional - uncomment if you don't want to share)
+# *_SUMMARY.md
+# *_GUIDE.md
+# *_STATUS.md

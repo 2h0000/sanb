@@ -1,0 +1,83 @@
+name: encrypted_notebook
+description: Secure Advanced Notebook - A cross-platform encrypted notebook app with end-to-end encryption
+publish_to: 'none'
+version: 1.0.2+3
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  
+  # State Management
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
+  
+  # Routing
+  go_router: ^13.0.0
+  
+  # Local Database
+  drift: ^2.14.0
+  sqlite3_flutter_libs: ^0.5.18
+  path_provider: ^2.1.1
+  path: ^1.8.3
+  
+  # Cryptography
+  cryptography: ^2.7.0
+  flutter_secure_storage: ^9.0.0
+  
+  # Utilities
+  uuid: ^4.2.2
+  intl: ^0.20.2
+  file_picker: ^8.0.0
+  share_plus: ^7.2.1
+  connectivity_plus: ^5.0.2
+  
+  # UI
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  
+  # Code Generation
+  build_runner: ^2.4.7
+  drift_dev: ^2.14.0
+  riverpod_generator: ^2.3.9
+  
+  # Testing
+  mockito: ^5.4.4
+  
+  # App Icon & Splash Screen
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.8
+
+flutter:
+  uses-material-design: true
+  
+  # Assets
+  assets:
+    - assets/icon/
+    - assets/splash/
+
+# App Icon Configuration
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/app_icon.png"
+  adaptive_icon_background: "#1A1A2E"
+  adaptive_icon_foreground: "assets/icon/app_icon_foreground.png"
+
+# Splash Screen Configuration
+flutter_native_splash:
+  color: "#1A1A2E"
+  image: "assets/splash/splash_icon.png"
+  android_12:
+    color: "#1A1A2E"
+    image: "assets/splash/splash_icon.png"
+  ios: true
+  android: true

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encrypted Notebook - Icon Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        canvas {
+            border: 2px solid #ddd;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .icon-preview {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #1A1A2E;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Encrypted Notebook - Icon Generator</h1>
+        <p>Generate placeholder icons for the app. Right-click on each canvas and "Save image as..." to download.</p>
+        
+        <div class="icon-preview">
+            <h2>App Icon (1024x1024)</h2>
+            <canvas id="appIcon" width="1024" height="1024"></canvas>
+            <br>
+            <button onclick="downloadCanvas('appIcon', 'app_icon.png')">Download App Icon</button>
+        </div>
+        
+        <div class="icon-preview">
+            <h2>Foreground Icon (1024x1024)</h2>
+            <canvas id="foregroundIcon" width="1024" height="1024"></canvas>
+            <br>
+            <button onclick="downloadCanvas('foregroundIcon', 'app_icon_foreground.png')">Download Foreground</button>
+        </div>
+        
+        <div class="icon-preview">
+            <h2>Splash Icon (512x512)</h2>
+            <canvas id="splashIcon" width="512" height="512"></canvas>
+            <br>
+            <button onclick="downloadCanvas('splashIcon', 'splash_icon.png')">Download Splash Icon</button>
+        </div>
+    </div>
+
+    <script>
+        // Draw App Icon (with background)
+        function drawAppIcon() {
+            const canvas = document.getElementById('appIcon');
+            const ctx = canvas.getContext('2d');
+            const size = 1024;
+            
+            // Background
+            ctx.fillStyle = '#1A1A2E';
+            ctx.fillRect(0, 0, size, size);
+            
+            // Draw notebook icon
+            drawNotebook(ctx, size / 2, size / 2, size * 0.4, '#FFFFFF');
+            
+            // Draw lock badge
+            drawLockBadge(ctx, size * 0.7, size * 0.7, size * 0.15);
+        }
+        
+        // Draw Foreground Icon (transparent background)
+        function drawForegroundIcon() {
+            const canvas = document.getElementById('foregroundIcon');
+            const ctx = canvas.getContext('2d');
+            const size = 1024;
+            
+            // Clear with transparency
+            ctx.clearRect(0, 0, size, size);
+            
+            // Draw notebook icon
+            drawNotebook(ctx, size / 2, size / 2, size * 0.4, '#FFFFFF');
+            
+            // Draw lock badge
+            drawLockBadge(ctx, size * 0.7, size * 0.7, size * 0.15);
+        }
+        
+        // Draw Splash Icon
+        function drawSplashIcon() {
+            const canvas = document.getElementById('splashIcon');
+            const ctx = canvas.getContext('2d');
+            const size = 512;
+            
+            // Clear with transparency
+            ctx.clearRect(0, 0, size, size);
+            
+            // Draw notebook icon
+            drawNotebook(ctx, size / 2, size / 2, size * 0.35, '#FFFFFF');
+            
+            // Draw lock badge
+            drawLockBadge(ctx, size * 0.68, size * 0.68, size * 0.18);
+        }
+        
+        // Helper: Draw notebook
+        function drawNotebook(ctx, x, y, size, color) {
+            ctx.save();
+            ctx.translate(x, y);
+            
+            // Book body
+            ctx.fillStyle = color;
+            ctx.fillRect(-size/2, -size/2, size, size);
+            
+            // Book spine shadow
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+            ctx.fillRect(-size/2, -size/2, size * 0.1, size);
+            
+            // Pages effect
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+            for (let i = 0; i < 3; i++) {
+                const offset = (i - 1) * size * 0.15;
+                ctx.fillRect(-size/2 + size * 0.2, offset - size * 0.02, size * 0.6, size * 0.04);
+            }
+            
+            ctx.restore();
+        }
+        
+        // Helper: Draw lock badge
+        function drawLockBadge(ctx, x, y, size) {
+            ctx.save();
+            ctx.translate(x, y);
+            
+            // Badge circle background
+            ctx.fillStyle = '#4CAF50';
+            ctx.beginPath();
+            ctx.arc(0, 0, size, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Lock body
+            ctx.fillStyle = '#FFFFFF';
+            const lockWidth = size * 0.5;
+            const lockHeight = size * 0.6;
+            ctx.fillRect(-lockWidth/2, -lockHeight/4, lockWidth, lockHeight/2);
+            
+            // Lock shackle
+            ctx.strokeStyle = '#FFFFFF';
+            ctx.lineWidth = size * 0.15;
+            ctx.beginPath();
+            ctx.arc(0, -lockHeight/4, lockWidth/3, Math.PI, 0, true);
+            ctx.stroke();
+            
+            // Keyhole
+            ctx.fillStyle = '#4CAF50';
+            ctx.beginPath();
+            ctx.arc(0, 0, size * 0.12, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.restore();
+        }
+        
+        // Download canvas as PNG
+        function downloadCanvas(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        // Generate all icons on load
+        window.onload = function() {
+            drawAppIcon();
+            drawForegroundIcon();
+            drawSplashIcon();
+        };
+    </script>
+</body>
+</html>
