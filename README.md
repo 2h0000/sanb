@@ -238,7 +238,8 @@ scripts\build\build_release.bat
 ### 📮 联系方式
 
 - GitHub Issues: [https://github.com/2h0000/sanb/issues](https://github.com/2h0000/sanb/issues)
-
+- 邮箱：2238770576@qq.com
+  
 ---
 
 ## 🌟 Star History
