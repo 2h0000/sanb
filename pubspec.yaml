@@ -1,7 +1,7 @@
 name: encrypted_notebook
 description: Secure Advanced Notebook - A cross-platform encrypted notebook app with end-to-end encryption
 publish_to: 'none'
-version: 1.0.2+3
+version: 1.0.1+3
 
 environment:
   sdk: '>=3.0.0 <4.0.0'

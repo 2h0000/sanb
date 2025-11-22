@@ -7,7 +7,7 @@
 1. **确保代码已推送到 GitHub**
    ```bash
    git add .
-   git commit -m "Release v1.0.2 - Remove account section"
+   git commit -m "Release v1.0.1 - Remove account section"
    git push origin main
    ```
 
@@ -17,11 +17,11 @@
    - 点击 "Create a new release"
 
 3. **填写 Release 信息**
-   - **Tag version**: `v1.0.2`
-   - **Release title**: `SANB v1.0.2`
+   - **Tag version**: `v1.0.1`
+   - **Release title**: `SANB v1.0.1`
    - **Description**: 
      ```
-     ## SANB v1.0.2
+     ## SANB v1.0.1
      
      ### 更新内容
      - 修复 vault 设置界面重复显示问题
@@ -37,7 +37,7 @@
 4. **上传 APK**
    - 在 "Attach binaries" 区域
    - 拖拽或选择文件：`build/app/outputs/flutter-apk/app-release.apk`
-   - 建议重命名为：`SANB-v1.0.2.apk`
+   - 建议重命名为：`SANB-v1.0.1.apk`
 
 5. **发布**
    - 勾选 "Set as the latest release"
@@ -62,13 +62,13 @@ APK 文件很大（57MB），会让仓库变得臃肿。
 
 2. **复制 APK**
    ```bash
-   copy build\app\outputs\flutter-apk\app-release.apk releases\SANB-v1.0.2.apk
+   copy build\app\outputs\flutter-apk\app-release.apk releases\SANB-v1.0.1.apk
    ```
 
 3. **提交**
    ```bash
-   git add releases/SANB-v1.0.2.apk
-   git commit -m "Add APK v1.0.2"
+   git add releases/SANB-v1.0.1.apk
+   git commit -m "Add APK v1.0.1"
    git push
    ```
 
@@ -124,8 +124,8 @@ jobs:
 
 使用方法：
 ```bash
-git tag v1.0.2
-git push origin v1.0.2
+git tag v1.0.1
+git push origin v1.0.1
 ```
 
 GitHub Actions 会自动构建并发布 APK。

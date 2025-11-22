@@ -3,7 +3,7 @@
 ## 项目信息
 - **项目名称**: Secure Advanced Notebook
 - **描述**: 跨平台端到端加密笔记应用
-- **版本**: 1.0.2+3
+- **版本**: 1.0.1+3
 - **Flutter SDK**: >=3.0.0 <4.0.0
 
 ## 目录结构
@@ -202,7 +202,7 @@ encrypted_notebook/
 ├── firestore.rules                      # Firestore 安全规则
 ├── storage.rules                        # Firebase Storage 规则
 │
-├── SANB-v1.0.2.apk                      # 已构建的 APK 文件
+├── SANB-v1.0.1.apk                      # 已构建的 APK 文件
 │
 └── 文档文件/                            # 项目文档
     ├── README.md                        # 项目说明
@@ -350,4 +350,4 @@ update_version.bat
 ---
 
 **最后更新**: 2024-11-22
-**项目版本**: 1.0.2+3
+**项目版本**: 1.0.1+3

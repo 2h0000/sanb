@@ -251,7 +251,7 @@ class SettingsScreenDev extends ConsumerWidget {
               showAboutDialog(
                 context: context,
                 applicationName: 'Secure Advanced Notebook (Dev)',
-                applicationVersion: '1.0.0-dev',
+                applicationVersion: '1.0.1-dev',
                 applicationIcon: const Icon(Icons.lock_outline, size: 48),
                 children: const [
                   Text(

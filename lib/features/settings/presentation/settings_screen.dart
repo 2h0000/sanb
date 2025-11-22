@@ -420,7 +420,7 @@ class SettingsScreen extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Version 1.0.0',
+                'Version 1.0.1',
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: 16),
@@ -629,7 +629,7 @@ class SettingsScreen extends ConsumerWidget {
               showAboutDialog(
                 context: context,
                 applicationName: 'Secure Advanced Notebook',
-                applicationVersion: '1.0.0',
+                applicationVersion: '1.0.1',
                 applicationIcon: const Icon(Icons.lock_outline, size: 48),
                 children: [
                   const Text(

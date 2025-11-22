@@ -11,8 +11,8 @@
 - **新名称**: SANB
 
 ### 版本信息
-- **版本号**: 1.0.2+3
-- **APK 文件**: `SANB-v1.0.2.apk`
+- **版本号**: 1.0.1+3
+- **APK 文件**: `SANB-v1.0.1.apk`
 
 ## 修改的文件
 
@@ -28,13 +28,13 @@
    - 目录结构已更新
 
 4. ✅ `pubspec.yaml`
-   - version: `1.0.2+3`
+   - version: `1.0.1+3`
 
 ## 构建结果
 
 ✅ APK 构建成功
 - 文件位置: `build/app/outputs/flutter-apk/app-release.apk`
-- 已复制为: `SANB-v1.0.2.apk`
+- 已复制为: `SANB-v1.0.1.apk`
 - 文件大小: 57.1MB
 
 ## 重要提示
@@ -50,15 +50,15 @@
 ## 下一步
 
 现在可以：
-1. 安装测试 `SANB-v1.0.2.apk`
+1. 安装测试 `SANB-v1.0.1.apk`
 2. 确认应用名称显示为 "SANB"
 3. 上传到 GitHub Releases
 
 ## GitHub Release 建议
 
 ```
-Tag: v1.0.2
-Title: SANB v1.0.2 - 首次发布
+Tag: v1.0.1
+Title: SANB v1.0.1 - 首次发布
 Description:
 SANB (Secure And Notebook) 是一个完全离线的加密笔记应用。
 
